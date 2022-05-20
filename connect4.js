@@ -166,7 +166,6 @@ function reset(){
   // clear board
   board = [];
   makeBoard();
-  console.log(board);
   // clear dom
   const htmlBoard = document.querySelector('#board');
   htmlBoard.innerHTML = "";
