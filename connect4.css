@@ -1,6 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Koulen&display=swap');
+
+*,*::before,*::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Koulen', sans-serif;
+  letter-spacing: 2px;
+  background-color: #eee;
+}
+
+#primary-heading{
+  display:flex;
+  align-items: center;
+  background-color: #000;
+  color:#fff;
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  padding: 0 1rem;
+  border-radius: 80px;
+}
+
+#four{
+  color:red;
+  font-size: 5rem;
+}
+
+#reset{
+  font-size: 1.125rem;
+  margin-bottom: 1rem;
+  border: 1px solid rgb(56, 139, 255);
+  color: rgb(56, 139, 255);
+  background-color:#fff;
+  padding: 0.2rem 0.4rem;
+  cursor:pointer;
+  border-radius: 7px;
+  transition: all 0.2s ease-out;
+}
+#reset:hover{
+  color: #fff;
+  background-color:rgb(56, 139, 255);
+  transform:scale(1.1);
+  box-shadow: 0 0 2px 4px rgba(0,0,0,0.3);
+}
 /* game board table */
+#game {
+  min-height: 80vh;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#board{
+  padding: 1rem 2rem;
+  background-color: rgba(23, 92, 220, 0.884);
+  border-radius: 15px;
+  margin-inline:auto;
+  width:90%;
+  max-width: 450px;
+  border: 4px solid rgb(2, 104, 247);
+  box-shadow: 0 0 4px 8px rgba(0,0,0,0.2);
+}
 
 #board td {
+  background: #fff;
+  border-radius: 50%;
   width: 50px;
   height: 50px;
   border: solid 1px #666;
@@ -10,30 +77,21 @@
 
 .piece {
   /* TODO: make into circles */
-  margin: 5px;
-  width: 80%;
-  height: 80%;
+  width: 100%;
+  height: 100%;
   border-radius: 50%;
 }
 
 /* TODO: make pieces red/blue,  depending on player 1/2 piece */
-.piece.player1 {
-  background-color: rgb(172, 106, 252);
+.piece.player1, #column-top.player1 td:hover {
+  background-color: rgb(252, 52, 52);
 }
 
-.piece.player2 {
-  background-color: rgb(255, 63, 63);
+.piece.player2, #column-top.player2 td:hover {
+  background-color: rgb(255, 230, 0);
 }
 
 /* column-top is table row of clickable areas for each column */
-
 #column-top td {
-  border: dashed 1px lightgray;
-}
-
-#column-top.player1 td:hover {
-  background-color: rgb(172, 106, 252);
-}
-#column-top.player2 td:hover {
-  background-color: rgb(255, 63, 63);
+  border: dashed 5px rgb(184, 213, 241);
 }
